@@ -1,7 +1,7 @@
-// module.exports = {
-//     passwordIsValid,
-//     passwordIsOk
-// }
+module.exports = {
+    passwordIsValid,
+    passwordIsOk
+}
 
 function passwordIsValid (password) {
 
@@ -19,3 +19,15 @@ function passwordIsValid (password) {
 }
 
 passwordIsValid('Sekgomotso#1');
+
+function passwordIsOk (password) {
+    if (password == '' && password.length <= 8) {
+        if (password.match(/[a-z]/) == null || password.match(/[A-Z]/) == null || password.match(/[0-9]/) == null || password.match(/[{ # % & * " ']/) == null) {
+            return false;
+        } 
+    } else {
+        return true;
+    }
+}
+
+console.log(passwordIsOk('Sekgomotso#1'));
