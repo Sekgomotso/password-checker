@@ -1,27 +1,24 @@
 module.exports = {
-    exist,
-    length
+    passwordIsValid,
+    passwordIsOk
 }
 
-function exist () {
-    var name;
+function passwordIsValid (password) {
+    var password = name;
     try {
         if (name == '') throw 'No password';
         if (name == 'Sekgomotso#1') throw 'password exists';
     }
     catch(error) {
         console.log(error);
-    }   
-}
+    }
 
-function length () {
-    var name = Sekgomotso;
-    var sln = txt.length;
     try {
-        if (sln < 8) throw 'Password denied';
-        if (sln >= 8) throw 'password exists';
+        if (passwordIsValid.length.value < 8) throw 'password denied';
+        if (passwordIsValid.length.value > 8) throw '';
     }
     catch(error) {
         console.log(error);
-    }   
+    }
 }
+

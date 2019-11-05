@@ -1,6 +1,7 @@
-var passwordchecker = require('../passwordchecker')
+var passwordchecker = require('../src/passwordchecker')
 
 describe('password should exist', function() {
+    var exist = 'Sekgomotso#1';
     it('must be unique', () => {
         expect(passwordchecker.exist('name.exist')).toBe('Sekgomotso#1');
     });
