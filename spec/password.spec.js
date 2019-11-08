@@ -42,3 +42,10 @@ describe('password should have at least one special character', () => {
         expect(password).toBe('Sekgomotso#1');
     });
 });
+
+describe ('password should at least meet 3 of the conditions', () => {
+    let password = 'Sekgomotso#1';
+    it ('should exist' && password.length <= 8 || password.match(/[a-z]/) == null || password.match(/[A-Z]/) == null || password.match(/[0-9]/) == null || password.match(/[{ # % & * " ' ! @ $ ^]/) == null, () => {
+        expect(password).toBe('Sekgomotso#1');
+    });
+});
